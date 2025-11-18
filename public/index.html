@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* small helper to center the page wrap if style.css isn't loaded yet */
+        .wrap{max-width:900px;margin:28px auto;padding:16px}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>My Movie Collection</h1>
+        <p>Welcome — use the buttons below to load data from the API.</p>
+
+        <div class="controls" style="margin-bottom:16px">
+            <button id="view-movies">View All Movies</button>
+            <button id="view-classics">View Classic Movies</button>
+            <button id="view-genres">View Genres</button>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>All Movies</h2>
+                <div id="movies"><p class="empty">Click "View All Movies" to load.</p></div>
+            </div>
+
+            <div class="card">
+                <h2>Classic Movies</h2>
+                <div id="classics"><p class="empty">Click "View Classic Movies" to load.</p></div>
+            </div>
+
+            <div class="card" style="grid-column:1 / -1">
+                <h2>Genres</h2>
+                <div id="genres"><p class="empty">Click "View Genres" to load.</p></div>
+            </div>
+        </div>
+
+        <footer>
+            <small>Data is fetched from /movies endpoints on this server.</small>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* Simple, clean CSS for the Movies API page */
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-600: #1e40af;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.wrap{
+  max-width:900px;
+  margin:32px auto;
+  padding:20px;
+}
+
+h1{
+  font-size:1.6rem;
+  margin:0 0 12px 0;
+}
+
+.controls{
+  display:flex;
+  gap:8px;
+  margin:12px 0 18px 0;
+}
+
+button{
+  background:var(--card);
+  border:1px solid #e6eefc;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  color:#0f172a;
+  font-weight:600;
+  transition:all .15s ease;
+}
+button:hover{transform:translateY(-1px); box-shadow:0 6px 18px rgba(37,99,235,0.06)}
+button:active{transform:translateY(0)}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+
+@media(min-width:720px){
+  .grid{grid-template-columns:1fr 1fr}
+}
+
+.card{
+  background:var(--card);
+  border-radius:10px;
+  padding:14px;
+  box-shadow:0 6px 18px rgba(2,6,23,0.04);
+  border:1px solid rgba(15,23,42,0.03);
+}
+
+.card h2{margin:0 0 8px 0; font-size:1rem}
+
+ul{margin:0; padding-left:18px}
+li{margin:6px 0; color:var(--muted)}
+
+.empty{color:var(--muted); font-style:italic}
+
+.count-badge{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  padding:2px 8px;
+  border-radius:999px;
+  font-size:0.8rem;
+  margin-left:8px;
+}
+
+footer{margin-top:18px; color:var(--muted); font-size:0.85rem}
+
+/* Movie-specific small styles */
+.movie-card{
+  border-radius:8px;
+  padding:10px;
+  background:linear-gradient(180deg, #fff, #fbfdff);
+  border:1px solid rgba(15,23,42,0.04);
+}
+.movie-meta{font-size:0.9rem; color:var(--muted); margin-top:6px}
+.release-year{font-weight:600; color:var(--muted); margin-left:8px}
+.classic-badge{
+  background:var(--accent-600);
+  color:white;
+  padding:4px 8px;
+  border-radius:999px;
+  font-size:0.75rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    list-style: none;
+    padding: 0;
+}
+
+.movie-item {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.movie-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.movie-description {
+    font-size: 14px;
+    margin-bottom: 0;
+}
